@@ -34,9 +34,12 @@ public class MovieViewHolder {
         public ImageView getPosterImageView() {return posterImageView;}
 
         public void bind(Movie movie){
-            titleTextView.setText(movie.getTitle());
-            yearTextView.setText(String.valueOf(movie.getYear()));
-            genreTextview.setText(movie.getGenre());
+            String titleString = "Title: " + movie.getTitle();
+            String yearString = "Year: " + String.valueOf(movie.getYear());
+            String genreString = "Genre: " + movie.getGenre();
+            titleTextView.setText(titleString);
+            yearTextView.setText(yearString);
+            genreTextview.setText(genreString);
         }
     }
 
